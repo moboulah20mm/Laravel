@@ -1,0 +1,7 @@
+Model bepaalt welke usergegevens je mag opslaan, verbergen en automatisch omzetten.
+
+De view laat aan de gebruiker zien wat er op dat moment getoond moet worden 
+
+De controller regelt de logica: hij beslist wat er moet gebeuren en welke data naar de view gaat.
+
+de roouter bepaalt welke URL naar welke controller functie gaat.

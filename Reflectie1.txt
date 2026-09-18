@@ -1,0 +1,2 @@
+  
+Een .gitignore zorgt ervoor dat Git bepaalde bestanden niet meeneemt in je commits
