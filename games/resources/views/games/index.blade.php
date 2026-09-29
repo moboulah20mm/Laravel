@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <a href="/games/create" class="btn btn-success mb-3">🎮 Add Game</a>
     <title>Game Collection</title>
 </head>
 <body>
     <div class="container" style="margin:40px;">
         <h1 class="display-4">🎮 Game Collection</h1>
+         <a href="/games/create" class="btn btn-success mb-3">🎮 Add Game</a>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
