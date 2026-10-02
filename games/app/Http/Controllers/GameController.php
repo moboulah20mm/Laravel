@@ -88,6 +88,9 @@ class GameController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $game = Game::find($id);
+        $game->delete();
+
+        return redirect('/games');
     }
 }
