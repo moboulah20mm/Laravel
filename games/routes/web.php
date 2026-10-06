@@ -26,3 +26,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/geheim', function () {
+    return view('geheim');
+})->middleware('auth');
