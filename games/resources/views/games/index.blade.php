@@ -3,7 +3,9 @@
 @section('title', '🎮 Game Collection')
 
 @section('content')
-    <a href="/games/create" class="btn btn-success mb-3">Add Game</a>
+    @role('admin')
+        <a href="{{ route('games.create') }}" class="btn btn-success mb-3">Add Game</a>
+    @endrole
 
     <table class="table">
         <thead class="thead-dark">
@@ -30,13 +32,17 @@
                         <a href="/games/show/{{ $game->id }}" class="btn btn-info btn-sm">Show</a>
                     </td>
                     <td>
-                        <a href="/games/edit/{{ $game->id }}" class="btn btn-primary btn-sm">Edit</a>
+                        @can('product aanpassen')
+                            <a href="/games/edit/{{ $game->id }}" class="btn btn-primary btn-sm">Edit</a>
+                        @endcan
                     </td>
                     <td>
-                        <form action="/games/destroy/{{ $game->id }}" method="post">
-                            @csrf
-                            <button onclick="return confirm('Weet je het zeker?')" class="btn btn-danger btn-sm" type="submit">Delete</button>
-                        </form>
+                        @can('product verwijderen')
+                            <form action="/games/destroy/{{ $game->id }}" method="post">
+                                @csrf
+                                <button onclick="return confirm('Weet je het zeker?')" class="btn btn-danger btn-sm" type="submit">Delete</button>
+                            </form>
+                        @endcan
                     </td>
                 </tr>
             @endforeach
